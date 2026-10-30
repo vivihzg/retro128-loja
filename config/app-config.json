@@ -1,15 +1,28 @@
 {
   "nomeLoja": "Retrô 128",
-  "versao": "1.0.0",
+  "versao": "2.0.0",
   "ambiente": "producao",
   "moeda": "BRL",
   "catalogoUrl": "data/catalogo.json",
-  "pastaCapas": "img/capas/",
+  "pastaCapas": "assets/capas/",
   "freteGratisAcima": 199.90,
   "blackFriday": {
-    "ativa": false,
+    "ativa": true,
     "fim": "2026-11-27T23:59:59-03:00",
     "intervaloContadorSegundos": 1,
-    "promocoes": {}
+    "promocoes": {
+      "ps2-01": {
+        "percentual": 30
+      },
+      "ps2-02": {
+        "percentual": 20
+      },
+      "ps2-03": {
+        "percentual": 25
+      },
+      "ps2-07": {
+        "percentual": 40
+      }
+    }
   }
 }
