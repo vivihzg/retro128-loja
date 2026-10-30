@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 380" width="270" height="380" role="img" aria-label="Capa de Lâmina de Kaeru">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b0a0a"/><stop offset="1" stop-color="#e63946"/></linearGradient></defs>
+<rect width="270" height="380" fill="url(#g)"/>
+<circle cx="135" cy="175" r="95" fill="#e63946" opacity=".35"/>
+<g transform="rotate(-35 135 180)"><rect x="129" y="60" width="12" height="190" rx="2" fill="#f1faee"/><rect x="110" y="240" width="50" height="9" fill="#e63946"/><rect x="130" y="249" width="10" height="40" fill="#3a2a1a"/></g>
+<g transform="rotate(35 135 180)"><rect x="129" y="60" width="12" height="190" rx="2" fill="#f1faee"/><rect x="110" y="240" width="50" height="9" fill="#e63946"/><rect x="130" y="249" width="10" height="40" fill="#3a2a1a"/></g>
+<rect x="0" y="300" width="270" height="80" fill="#000" opacity=".35"/>
+<text x="135" y="306" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">LÂMINA DE</text><text x="135" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">KAERU</text>
+<rect width="270" height="30" fill="#0a0a0a"/>
+<text x="12" y="20" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#cfd8ff" letter-spacing="2">128-BIT</text>
+<text x="258" y="20" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8890b5" letter-spacing="1">RETRÔ 128</text>
+<rect x="0.5" y="0.5" width="269" height="379" fill="none" stroke="#000" opacity=".4"/>
+</svg>

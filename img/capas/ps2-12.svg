@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 380" width="270" height="380" role="img" aria-label="Capa de Turbo Kart Mania">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff595e"/><stop offset="1" stop-color="#ffca3a"/></linearGradient></defs>
+<rect width="270" height="380" fill="url(#g)"/>
+<circle cx="135" cy="150" r="58" fill="#1982c4" opacity=".9"/>
+<rect x="60" y="120" width="150" height="3" fill="#ff595e" opacity=".55"/>
+<rect x="60" y="129" width="150" height="3" fill="#ff595e" opacity=".55"/>
+<rect x="60" y="138" width="150" height="3" fill="#ff595e" opacity=".55"/>
+<rect x="60" y="147" width="150" height="3" fill="#ff595e" opacity=".55"/>
+<rect x="60" y="156" width="150" height="3" fill="#ff595e" opacity=".55"/>
+<polygon points="0,300 270,300 160,190 110,190" fill="#111" opacity=".85"/>
+<rect x="134.0" y="195.0" width="2.0" height="4.0" fill="#1982c4"/>
+<rect x="133.5" y="197.9" width="3.0" height="6.7" fill="#1982c4"/>
+<rect x="133.0" y="206.7" width="4.0" height="9.3" fill="#1982c4"/>
+<rect x="132.5" y="221.2" width="5.0" height="12.0" fill="#1982c4"/>
+<rect x="132.0" y="241.7" width="6.0" height="14.7" fill="#1982c4"/>
+<rect x="131.5" y="267.9" width="7.0" height="17.3" fill="#1982c4"/>
+<rect x="20" y="60" width="12" height="12" fill="#fff"/>
+<rect x="32" y="60" width="12" height="12" fill="#111"/>
+<rect x="44" y="60" width="12" height="12" fill="#fff"/>
+<rect x="56" y="60" width="12" height="12" fill="#111"/>
+<rect x="68" y="60" width="12" height="12" fill="#fff"/>
+<rect x="80" y="60" width="12" height="12" fill="#111"/>
+<rect x="92" y="60" width="12" height="12" fill="#fff"/>
+<rect x="104" y="60" width="12" height="12" fill="#111"/>
+<rect x="20" y="72" width="12" height="12" fill="#111"/>
+<rect x="32" y="72" width="12" height="12" fill="#fff"/>
+<rect x="44" y="72" width="12" height="12" fill="#111"/>
+<rect x="56" y="72" width="12" height="12" fill="#fff"/>
+<rect x="68" y="72" width="12" height="12" fill="#111"/>
+<rect x="80" y="72" width="12" height="12" fill="#fff"/>
+<rect x="92" y="72" width="12" height="12" fill="#111"/>
+<rect x="104" y="72" width="12" height="12" fill="#fff"/>
+<rect x="20" y="84" width="12" height="12" fill="#fff"/>
+<rect x="32" y="84" width="12" height="12" fill="#111"/>
+<rect x="44" y="84" width="12" height="12" fill="#fff"/>
+<rect x="56" y="84" width="12" height="12" fill="#111"/>
+<rect x="68" y="84" width="12" height="12" fill="#fff"/>
+<rect x="80" y="84" width="12" height="12" fill="#111"/>
+<rect x="92" y="84" width="12" height="12" fill="#fff"/>
+<rect x="104" y="84" width="12" height="12" fill="#111"/>
+<rect x="18" y="58" width="3" height="90" fill="#fff"/>
+<rect x="0" y="300" width="270" height="80" fill="#000" opacity=".35"/>
+<text x="135" y="306" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">TURBO KART</text><text x="135" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">MANIA</text>
+<rect width="270" height="30" fill="#0a0a0a"/>
+<text x="12" y="20" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#cfd8ff" letter-spacing="2">128-BIT</text>
+<text x="258" y="20" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8890b5" letter-spacing="1">RETRÔ 128</text>
+<rect x="0.5" y="0.5" width="269" height="379" fill="none" stroke="#000" opacity=".4"/>
+</svg>

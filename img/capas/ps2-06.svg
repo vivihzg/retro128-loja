@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 380" width="270" height="380" role="img" aria-label="Capa de Pixel &amp; Pena">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a86ff"/><stop offset="1" stop-color="#ffbe0b"/></linearGradient></defs>
+<rect width="270" height="380" fill="url(#g)"/>
+<rect x="0" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="30" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="60" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="90" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="120" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="150" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="180" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="210" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="240" y="270" width="30" height="30" fill="#fb5607" stroke="#7a2a00" stroke-width="2"/>
+<rect x="60" y="200" width="30" height="30" fill="#ffbe0b" stroke="#8a5a00" stroke-width="2"/><text x="75" y="222" font-size="18" font-family="Arial Black,sans-serif" text-anchor="middle" fill="#8a5a00">?</text>
+<rect x="90" y="200" width="30" height="30" fill="#ffbe0b" stroke="#8a5a00" stroke-width="2"/><text x="105" y="222" font-size="18" font-family="Arial Black,sans-serif" text-anchor="middle" fill="#8a5a00">?</text>
+<rect x="180" y="150" width="30" height="30" fill="#ffbe0b" stroke="#8a5a00" stroke-width="2"/><text x="195" y="172" font-size="18" font-family="Arial Black,sans-serif" text-anchor="middle" fill="#8a5a00">?</text>
+<g transform="translate(150 225)"><ellipse cx="0" cy="0" rx="22" ry="18" fill="#fff"/><circle cx="8" cy="-6" r="4" fill="#111"/><polygon points="20,-2 34,2 20,6" fill="#ff9f1c"/><path d="M-14 -4 q-18 -20 -2 -22 q4 10 10 14" fill="#e0e0e0"/></g>
+<ellipse cx="50" cy="80" rx="28" ry="12" fill="#fff" opacity=".9"/>
+<ellipse cx="135" cy="105" rx="28" ry="12" fill="#fff" opacity=".9"/>
+<ellipse cx="220" cy="80" rx="28" ry="12" fill="#fff" opacity=".9"/>
+<rect x="0" y="300" width="270" height="80" fill="#000" opacity=".35"/>
+<text x="135" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="22" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">PIXEL &amp; PENA</text>
+<rect width="270" height="30" fill="#0a0a0a"/>
+<text x="12" y="20" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#cfd8ff" letter-spacing="2">128-BIT</text>
+<text x="258" y="20" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8890b5" letter-spacing="1">RETRÔ 128</text>
+<rect x="0.5" y="0.5" width="269" height="379" fill="none" stroke="#000" opacity=".4"/>
+</svg>

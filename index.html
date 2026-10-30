@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retrô 128 — Jogos de PS2</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="marca">
+      <img src="img/favicon.svg" alt="" width="40" height="40">
+      <div>
+        <h1>Retrô 128</h1>
+        <p>Jogos de PS2 seminovos e colecionáveis</p>
+      </div>
+    </div>
+    <input id="busca" type="search" placeholder="Buscar jogo..." aria-label="Buscar jogo">
+    <button id="abrir-carrinho" class="botao-carrinho" aria-label="Abrir carrinho">
+      Carrinho <span id="carrinho-qtd">0</span>
+    </button>
+  </header>
+
+  <section id="banner-bf" class="banner-bf" hidden>
+    <span class="bf-titulo">BLACK FRIDAY RETRÔ</span>
+    <span class="bf-legenda">termina em</span>
+    <span class="bf-tempo"></span>
+  </section>
+
+  <main id="vitrine">
+    <section id="destaque" class="destaque"></section>
+
+    <section class="catalogo">
+      <div class="catalogo-cabecalho">
+        <h2>Catálogo</h2>
+        <span id="contagem" class="contagem">carregando...</span>
+      </div>
+      <div id="filtros" class="filtros"></div>
+      <div id="grade" class="grade"></div>
+    </section>
+  </main>
+
+  <aside id="carrinho" class="carrinho" aria-label="Carrinho">
+    <div class="carrinho-topo">
+      <h2>Seu carrinho</h2>
+      <button id="fechar-carrinho" class="remover" aria-label="Fechar">✕</button>
+    </div>
+    <ul id="carrinho-itens"></ul>
+    <div class="carrinho-rodape">
+      <p>Total: <strong id="carrinho-total">R$ 0,00</strong></p>
+      <p id="carrinho-frete" class="frete"></p>
+      <button id="finalizar" class="botao">Finalizar compra (simulada)</button>
+    </div>
+  </aside>
+
+  <div id="aviso" class="aviso" role="status"></div>
+
+  <footer class="rodape">
+    <span id="versao">versão ?</span>
+    <a href="logs.html" target="_blank" rel="noopener">Painel de logs</a>
+    <span>Loja fictícia para fins didáticos · capas e títulos inventados</span>
+  </footer>
+
+  <script src="js/observabilidade.js"></script>
+  <script src="js/contador.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

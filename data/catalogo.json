@@ -1,0 +1,137 @@
+{
+  "atualizadoEm": "2026-10-01",
+  "jogos": [
+    {
+      "id": "ps2-01",
+      "titulo": "Asfalto Noturno",
+      "genero": "Corrida",
+      "ano": 2003,
+      "preco": 89.9,
+      "condicao": "Completo na caixa",
+      "estoque": 7,
+      "descricao": "Rachas pelas avenidas de uma metrópole que nunca dorme. Trilha eletrônica e tunagem completa.",
+      "capa": "ps2-01.svg"
+    },
+    {
+      "id": "ps2-02",
+      "titulo": "Lâmina de Kaeru",
+      "genero": "Luta",
+      "ano": 2002,
+      "preco": 74.9,
+      "condicao": "Seminovo",
+      "estoque": 4,
+      "descricao": "Duelos de espada em arenas feudais, com 18 lutadores e modo história.",
+      "capa": "ps2-02.svg"
+    },
+    {
+      "id": "ps2-03",
+      "titulo": "Crônicas de Vel'Thar",
+      "genero": "RPG",
+      "ano": 2004,
+      "preco": 129.9,
+      "condicao": "Colecionável lacrado",
+      "estoque": 2,
+      "descricao": "RPG por turnos de mais de 60 horas, com party de seis heróis e invocações.",
+      "capa": "ps2-03.svg"
+    },
+    {
+      "id": "ps2-04",
+      "titulo": "Silêncio em Morrow Hill",
+      "genero": "Terror",
+      "ano": 2001,
+      "preco": 149.9,
+      "condicao": "Completo na caixa",
+      "estoque": 3,
+      "descricao": "Uma cidade coberta de névoa, um rádio que chia e um mistério que ninguém quer resolver.",
+      "capa": "ps2-04.svg"
+    },
+    {
+      "id": "ps2-05",
+      "titulo": "Gol de Placa 2004",
+      "genero": "Esporte",
+      "ano": 2004,
+      "preco": 39.9,
+      "condicao": "Seminovo",
+      "estoque": 12,
+      "descricao": "Futebol com narração em português, ligas nacionais e modo carreira.",
+      "capa": "ps2-05.svg"
+    },
+    {
+      "id": "ps2-06",
+      "titulo": "Pixel & Pena",
+      "genero": "Plataforma",
+      "ano": 2002,
+      "preco": 59.9,
+      "condicao": "Seminovo",
+      "estoque": 6,
+      "descricao": "Uma ave desastrada atravessa nove mundos de blocos e segredos.",
+      "capa": "ps2-06.svg"
+    },
+    {
+      "id": "ps2-07",
+      "titulo": "Operação Neblina",
+      "genero": "Tiro",
+      "ano": 2005,
+      "preco": 69.9,
+      "condicao": "Completo na caixa",
+      "estoque": 5,
+      "descricao": "Infiltração tática noturna: silêncio vale mais que munição.",
+      "capa": "ps2-07.svg"
+    },
+    {
+      "id": "ps2-08",
+      "titulo": "Batida Tropical",
+      "genero": "Ritmo",
+      "ano": 2003,
+      "preco": 54.9,
+      "condicao": "Seminovo",
+      "estoque": 8,
+      "descricao": "Jogo de ritmo com 40 faixas e suporte a tapete de dança.",
+      "capa": "ps2-08.svg"
+    },
+    {
+      "id": "ps2-09",
+      "titulo": "Reinos de Ferro",
+      "genero": "Estratégia",
+      "ano": 2004,
+      "preco": 79.9,
+      "condicao": "Seminovo",
+      "estoque": 4,
+      "descricao": "Estratégia em tempo real com cercos, castelos e diplomacia.",
+      "capa": "ps2-09.svg"
+    },
+    {
+      "id": "ps2-10",
+      "titulo": "Skate Urbano Pro",
+      "genero": "Esporte",
+      "ano": 2002,
+      "preco": 49.9,
+      "condicao": "Seminovo",
+      "estoque": 9,
+      "descricao": "Manobras, pistas abertas e editor de parques.",
+      "capa": "ps2-10.svg"
+    },
+    {
+      "id": "ps2-11",
+      "titulo": "Ecos do Abismo",
+      "genero": "Aventura",
+      "ano": 2005,
+      "preco": 119.9,
+      "condicao": "Completo na caixa",
+      "estoque": 3,
+      "descricao": "Explore ruínas submersas e decifre uma civilização esquecida.",
+      "capa": "ps2-11.svg"
+    },
+    {
+      "id": "ps2-12",
+      "titulo": "Turbo Kart Mania",
+      "genero": "Corrida",
+      "ano": 2003,
+      "preco": 64.9,
+      "condicao": "Seminovo",
+      "estoque": 10,
+      "descricao": "Kart para até quatro jogadores em tela dividida, com itens e atalhos.",
+      "capa": "ps2-12.svg"
+    }
+  ]
+}

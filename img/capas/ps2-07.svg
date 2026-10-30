@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 380" width="270" height="380" role="img" aria-label="Capa de Operação Neblina">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10151c"/><stop offset="1" stop-color="#4a5d6e"/></linearGradient></defs>
+<rect width="270" height="380" fill="url(#g)"/>
+<circle cx="135" cy="180" r="80" fill="none" stroke="#9ef01a" stroke-width="3"/>
+<circle cx="135" cy="180" r="45" fill="none" stroke="#9ef01a" stroke-width="2" opacity=".6"/>
+<path d="M135 85 V150 M135 210 V275 M40 180 H105 M165 180 H230" stroke="#9ef01a" stroke-width="3"/>
+<circle cx="135" cy="180" r="3" fill="#9ef01a"/>
+<rect x="-10" y="90" width="300" height="22" fill="#4a5d6e" opacity=".18"/>
+<rect x="-10" y="135" width="300" height="22" fill="#4a5d6e" opacity=".18"/>
+<rect x="-10" y="180" width="300" height="22" fill="#4a5d6e" opacity=".18"/>
+<rect x="-10" y="225" width="300" height="22" fill="#4a5d6e" opacity=".18"/>
+<rect x="-10" y="270" width="300" height="22" fill="#4a5d6e" opacity=".18"/>
+<rect x="0" y="300" width="270" height="80" fill="#000" opacity=".35"/>
+<text x="135" y="306" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">OPERAÇÃO</text><text x="135" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">NEBLINA</text>
+<rect width="270" height="30" fill="#0a0a0a"/>
+<text x="12" y="20" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#cfd8ff" letter-spacing="2">128-BIT</text>
+<text x="258" y="20" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8890b5" letter-spacing="1">RETRÔ 128</text>
+<rect x="0.5" y="0.5" width="269" height="379" fill="none" stroke="#000" opacity=".4"/>
+</svg>

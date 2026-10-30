@@ -1,0 +1,15 @@
+{
+  "nomeLoja": "Retrô 128",
+  "versao": "1.0.0",
+  "ambiente": "producao",
+  "moeda": "BRL",
+  "catalogoUrl": "data/catalogo.json",
+  "pastaCapas": "img/capas/",
+  "freteGratisAcima": 199.90,
+  "blackFriday": {
+    "ativa": false,
+    "fim": "2026-11-27T23:59:59-03:00",
+    "intervaloContadorSegundos": 1,
+    "promocoes": {}
+  }
+}

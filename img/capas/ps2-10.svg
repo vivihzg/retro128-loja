@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 380" width="270" height="380" role="img" aria-label="Capa de Skate Urbano Pro">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1b1b"/><stop offset="1" stop-color="#00b4d8"/></linearGradient></defs>
+<rect width="270" height="380" fill="url(#g)"/>
+<path d="M0 300 V230 Q 60 230 90 300 Z" fill="#00b4d8"/><path d="M270 300 V200 Q 190 200 170 300 Z" fill="#00b4d8"/>
+<g transform="translate(140 150) rotate(-20)"><rect x="-45" y="0" width="90" height="10" rx="5" fill="#ff9f1c"/><circle cx="-30" cy="14" r="6" fill="#eee"/><circle cx="30" cy="14" r="6" fill="#eee"/></g>
+<line x1="60" y1="190" x2="20" y2="205" stroke="#ff9f1c" stroke-width="3" opacity=".7"/>
+<line x1="68" y1="194" x2="28" y2="209" stroke="#ff9f1c" stroke-width="3" opacity=".7"/>
+<line x1="76" y1="198" x2="36" y2="213" stroke="#ff9f1c" stroke-width="3" opacity=".7"/>
+<line x1="84" y1="202" x2="44" y2="217" stroke="#ff9f1c" stroke-width="3" opacity=".7"/>
+<line x1="92" y1="206" x2="52" y2="221" stroke="#ff9f1c" stroke-width="3" opacity=".7"/>
+<line x1="100" y1="210" x2="60" y2="225" stroke="#ff9f1c" stroke-width="3" opacity=".7"/>
+<rect x="0" y="300" width="270" height="80" fill="#000" opacity=".35"/>
+<text x="135" y="310" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="22" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">SKATE URBANO</text><text x="135" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="22" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">PRO</text>
+<rect width="270" height="30" fill="#0a0a0a"/>
+<text x="12" y="20" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#cfd8ff" letter-spacing="2">128-BIT</text>
+<text x="258" y="20" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8890b5" letter-spacing="1">RETRÔ 128</text>
+<rect x="0.5" y="0.5" width="269" height="379" fill="none" stroke="#000" opacity=".4"/>
+</svg>

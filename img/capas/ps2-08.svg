@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 380" width="270" height="380" role="img" aria-label="Capa de Batida Tropical">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff006e"/><stop offset="1" stop-color="#ffbe0b"/></linearGradient></defs>
+<rect width="270" height="380" fill="url(#g)"/>
+<path d="M0 120 Q 17 102 34 120 Q 51 138 68 120 Q 85 102 102 120 Q 119 138 136 120 Q 153 102 170 120 Q 187 138 204 120 Q 221 102 238 120 Q 255 138 272 120" fill="none" stroke="#3a0ca3" stroke-width="5" opacity=".9"/>
+<path d="M0 144 Q 17 126 34 144 Q 51 162 68 144 Q 85 126 102 144 Q 119 162 136 144 Q 153 126 170 144 Q 187 162 204 144 Q 221 126 238 144 Q 255 162 272 144" fill="none" stroke="#ffbe0b" stroke-width="5" opacity=".9"/>
+<path d="M0 168 Q 17 150 34 168 Q 51 186 68 168 Q 85 150 102 168 Q 119 186 136 168 Q 153 150 170 168 Q 187 186 204 168 Q 221 150 238 168 Q 255 186 272 168" fill="none" stroke="#3a0ca3" stroke-width="5" opacity=".9"/>
+<path d="M0 192 Q 17 174 34 192 Q 51 210 68 192 Q 85 174 102 192 Q 119 210 136 192 Q 153 174 170 192 Q 187 210 204 192 Q 221 174 238 192 Q 255 210 272 192" fill="none" stroke="#ffbe0b" stroke-width="5" opacity=".9"/>
+<path d="M0 216 Q 17 198 34 216 Q 51 234 68 216 Q 85 198 102 216 Q 119 234 136 216 Q 153 198 170 216 Q 187 234 204 216 Q 221 198 238 216 Q 255 234 272 216" fill="none" stroke="#3a0ca3" stroke-width="5" opacity=".9"/>
+<path d="M0 240 Q 17 222 34 240 Q 51 258 68 240 Q 85 222 102 240 Q 119 258 136 240 Q 153 222 170 240 Q 187 258 204 240 Q 221 222 238 240 Q 255 258 272 240" fill="none" stroke="#ffbe0b" stroke-width="5" opacity=".9"/>
+<path d="M0 264 Q 17 246 34 264 Q 51 282 68 264 Q 85 246 102 264 Q 119 282 136 264 Q 153 246 170 264 Q 187 282 204 264 Q 221 246 238 264 Q 255 282 272 264" fill="none" stroke="#3a0ca3" stroke-width="5" opacity=".9"/>
+<g fill="#fff"><circle cx="90" cy="105" r="12"/><rect x="99" y="55" width="4" height="50"/><circle cx="170" cy="95" r="12"/><rect x="179" y="45" width="4" height="50"/><rect x="99" y="45" width="84" height="10"/></g>
+<rect x="0" y="300" width="270" height="80" fill="#000" opacity=".35"/>
+<text x="135" y="306" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">BATIDA</text><text x="135" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">TROPICAL</text>
+<rect width="270" height="30" fill="#0a0a0a"/>
+<text x="12" y="20" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#cfd8ff" letter-spacing="2">128-BIT</text>
+<text x="258" y="20" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8890b5" letter-spacing="1">RETRÔ 128</text>
+<rect x="0.5" y="0.5" width="269" height="379" fill="none" stroke="#000" opacity=".4"/>
+</svg>

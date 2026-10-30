@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de logs — Retrô 128</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <style>
+    body { margin: 0; font-family: system-ui, Segoe UI, Arial, sans-serif; background: #0b0f1a; color: #dfe6ff; }
+    header { padding: 16px 24px; background: #111829; border-bottom: 1px solid #263252; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    h1 { font-size: 18px; margin: 0 auto 0 0; }
+    select, input, button { background: #182038; color: #dfe6ff; border: 1px solid #2c3a63; border-radius: 6px; padding: 7px 10px; font-size: 14px; }
+    button { cursor: pointer; } button:hover { border-color: #5b7cff; }
+    main { padding: 16px 24px; }
+    .resumo { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+    .caixa { background: #111829; border: 1px solid #263252; border-radius: 8px; padding: 10px 14px; min-width: 120px; }
+    .caixa b { display: block; font-size: 22px; }
+    .caixa small { color: #8c98c4; }
+    h2 { font-size: 15px; margin: 22px 0 8px; color: #9fb0ff; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #1d2742; vertical-align: top; }
+    th { background: #111829; position: sticky; top: 0; }
+    td.msg { font-family: ui-monospace, Consolas, monospace; word-break: break-word; }
+    tr.det td { background: #0e1424; }
+    pre { margin: 0; white-space: pre-wrap; font-size: 12px; color: #b8c4ee; }
+    .nivel { font-weight: 700; padding: 2px 6px; border-radius: 4px; font-size: 11px; }
+    .INFO { background: #1d3557; } .ALERTA { background: #8a6d00; } .ERRO { background: #9b1d2e; }
+    .rep { color: #ffcc00; font-weight: 700; }
+    .vazio { color: #8c98c4; padding: 20px 0; }
+    a { color: #6fdcff; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Painel de logs · Retrô 128</h1>
+    <select id="f-nivel"><option value="">Todos os níveis</option><option>INFO</option><option>ALERTA</option><option>ERRO</option></select>
+    <select id="f-versao"><option value="">Todas as versões</option></select>
+    <input id="f-texto" type="search" placeholder="Filtrar texto (evento, mensagem...)">
+    <label><input id="auto" type="checkbox" checked> atualizar a cada 3 s</label>
+    <button id="exportar">Exportar JSON</button>
+    <button id="limpar">Limpar logs</button>
+    <a href="index.html">← voltar à loja</a>
+  </header>
+  <main>
+    <div class="resumo" id="resumo"></div>
+    <h2>Eventos por versão (quantas vezes cada evento ocorreu)</h2>
+    <div id="matriz"></div>
+    <h2>Registros (mais recentes primeiro) — clique numa linha para ver os detalhes</h2>
+    <div id="tabela"></div>
+  </main>
+<script>
+  var BASE = location.pathname.replace(/[^/]*$/, '');
+  var CHAVE = 'retro128.logs:' + BASE;
+  var abertos = {};
+
+  function ler() { try { return JSON.parse(localStorage.getItem(CHAVE) || '[]'); } catch (e) { return []; } }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function hora(iso) { var d = new Date(iso); return d.toLocaleDateString('pt-BR') + ' ' + d.toLocaleTimeString('pt-BR'); }
+  function rotuloVersao(r) { return 'v' + r.versaoApp + ' (' + r.ref + ' @ ' + r.commit + ')'; }
+
+  function desenhar() {
+    var todos = ler();
+    var fn = document.getElementById('f-nivel').value;
+    var fv = document.getElementById('f-versao').value;
+    var ft = document.getElementById('f-texto').value.toLowerCase();
+
+    var versoes = [];
+    todos.forEach(function (r) { var v = rotuloVersao(r); if (versoes.indexOf(v) < 0) versoes.push(v); });
+    var sel = document.getElementById('f-versao');
+    if (sel.options.length - 1 !== versoes.length) {
+      sel.innerHTML = '<option value="">Todas as versões</option>' + versoes.map(function (v) { return '<option' + (v === fv ? ' selected' : '') + '>' + esc(v) + '</option>'; }).join('');
+    }
+
+    var lista = todos.filter(function (r) {
+      return (!fn || r.nivel === fn) && (!fv || rotuloVersao(r) === fv) &&
+        (!ft || (r.evento + ' ' + r.mensagem + ' ' + JSON.stringify(r.dados)).toLowerCase().indexOf(ft) >= 0);
+    });
+
+    var cont = { INFO: 0, ALERTA: 0, ERRO: 0 };
+    lista.forEach(function (r) { cont[r.nivel] += r.repeticoes || 1; });
+    document.getElementById('resumo').innerHTML =
+      '<div class="caixa"><b>' + lista.length + '</b><small>registros filtrados</small></div>' +
+      '<div class="caixa"><b>' + cont.INFO + '</b><small>INFO</small></div>' +
+      '<div class="caixa"><b>' + cont.ALERTA + '</b><small>ALERTA</small></div>' +
+      '<div class="caixa"><b>' + cont.ERRO + '</b><small>ERRO</small></div>' +
+      '<div class="caixa"><b>' + versoes.length + '</b><small>versões vistas</small></div>';
+
+    var eventos = {};
+    lista.forEach(function (r) {
+      var k = r.nivel + ' · ' + r.evento;
+      eventos[k] = eventos[k] || {};
+      var v = rotuloVersao(r);
+      eventos[k][v] = (eventos[k][v] || 0) + (r.repeticoes || 1);
+    });
+    var cols = versoes.filter(function (v) { return !fv || v === fv; });
+    var chaves = Object.keys(eventos).sort();
+    document.getElementById('matriz').innerHTML = chaves.length ?
+      '<table><tr><th>Nível · evento</th>' + cols.map(function (v) { return '<th>' + esc(v) + '</th>'; }).join('') + '</tr>' +
+      chaves.map(function (k) {
+        return '<tr><td>' + esc(k) + '</td>' + cols.map(function (v) { return '<td>' + (eventos[k][v] || '') + '</td>'; }).join('') + '</tr>';
+      }).join('') + '</table>' : '<p class="vazio">Sem registros.</p>';
+
+    var linhas = lista.slice().reverse().slice(0, 300).map(function (r) {
+      var id = r.ts + r.evento + r.sessao;
+      var h = '<tr data-id="' + esc(id) + '" style="cursor:pointer"><td>' + hora(r.ts) + '</td><td><span class="nivel ' + r.nivel + '">' + r.nivel + '</span></td>' +
+        '<td>' + esc(r.evento) + (r.repeticoes > 1 ? ' <span class="rep">×' + r.repeticoes + '</span>' : '') + '</td>' +
+        '<td>' + esc(rotuloVersao(r)) + '</td><td>' + esc(r.pagina) + '</td><td class="msg">' + esc(r.mensagem) + '</td></tr>';
+      if (abertos[id]) h += '<tr class="det"><td colspan="6"><pre>' + esc(JSON.stringify(r, null, 2)) + '</pre></td></tr>';
+      return h;
+    }).join('');
+    document.getElementById('tabela').innerHTML = linhas ?
+      '<table><tr><th>Data/hora</th><th>Nível</th><th>Evento</th><th>Versão (ref @ commit)</th><th>Página</th><th>Mensagem</th></tr>' + linhas + '</table>' :
+      '<p class="vazio">Nenhum registro. Abra a loja (index.html) neste mesmo navegador para gerar logs.</p>';
+  }
+
+  document.getElementById('tabela').addEventListener('click', function (ev) {
+    var tr = ev.target.closest('tr[data-id]'); if (!tr) return;
+    abertos[tr.dataset.id] = !abertos[tr.dataset.id]; desenhar();
+  });
+  ['f-nivel', 'f-versao', 'f-texto'].forEach(function (id) { document.getElementById(id).addEventListener('input', desenhar); });
+  document.getElementById('exportar').onclick = function () {
+    var blob = new Blob([JSON.stringify(ler(), null, 2)], { type: 'application/json' });
+    var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+    a.download = 'logs-retro128-' + new Date().toISOString().slice(0, 19).replace(/:/g, '-') + '.json'; a.click();
+  };
+  document.getElementById('limpar').onclick = function () {
+    if (confirm('Apagar todos os logs deste navegador? Exporte antes se precisar deles.')) { localStorage.removeItem(CHAVE); desenhar(); }
+  };
+  setInterval(function () { if (document.getElementById('auto').checked) desenhar(); }, 3000);
+  desenhar();
+</script>
+</body>
+</html>

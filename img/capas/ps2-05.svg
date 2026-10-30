@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 380" width="270" height="380" role="img" aria-label="Capa de Gol de Placa 2004">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b3d20"/><stop offset="1" stop-color="#2dc653"/></linearGradient></defs>
+<rect width="270" height="380" fill="url(#g)"/>
+<rect x="20" y="70" width="230" height="230" fill="none" stroke="#fff" stroke-width="3" opacity=".5"/>
+<line x1="20" y1="185" x2="250" y2="185" stroke="#fff" stroke-width="3" opacity=".5"/>
+<circle cx="135" cy="185" r="40" fill="none" stroke="#fff" stroke-width="3" opacity=".5"/>
+<circle cx="135" cy="185" r="52" fill="#fff"/>
+<polygon points="135.0,165.0 154.0,178.8 146.8,201.2 123.2,201.2 116.0,178.8" fill="#111"/>
+<circle cx="135.0" cy="141.0" r="9" fill="#111"/>
+<circle cx="176.8" cy="171.4" r="9" fill="#111"/>
+<circle cx="160.9" cy="220.6" r="9" fill="#111"/>
+<circle cx="109.1" cy="220.6" r="9" fill="#111"/>
+<circle cx="93.2" cy="171.4" r="9" fill="#111"/>
+<rect x="0" y="300" width="270" height="80" fill="#000" opacity=".35"/>
+<text x="135" y="310" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="22" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">GOL DE PLACA</text><text x="135" y="334" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="22" fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">2004</text>
+<rect width="270" height="30" fill="#0a0a0a"/>
+<text x="12" y="20" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#cfd8ff" letter-spacing="2">128-BIT</text>
+<text x="258" y="20" text-anchor="end" font-family="Arial,sans-serif" font-size="10" fill="#8890b5" letter-spacing="1">RETRÔ 128</text>
+<rect x="0.5" y="0.5" width="269" height="379" fill="none" stroke="#000" opacity=".4"/>
+</svg>

@@ -1,0 +1,61 @@
+# Publica a loja no GitHub Pages.
+#  - A cada push na branch main, publica a versão atual (deploy normal).
+#  - Pela aba Actions > "Deploy no GitHub Pages" > "Run workflow" é possível
+#    publicar QUALQUER versão anterior (tag, branch ou commit): é o nosso ROLLBACK.
+name: Deploy no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      versao:
+        description: "Versão a publicar (tag como v1.0.0, branch ou SHA). Vazio = main"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.publicacao.outputs.page_url }}
+    steps:
+      - name: Baixar o código da versão escolhida
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.versao || github.sha }}
+
+      - name: Carimbar a versão publicada (build-info.json)
+        env:
+          REF_PUBLICADA: ${{ inputs.versao || github.ref_name }}
+          EVENTO: ${{ github.event_name }}
+          EXECUCAO: ${{ github.run_number }}
+        run: |
+          COMMIT=$(git rev-parse --short HEAD)
+          DATA=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          printf '{"ref":"%s","commit":"%s","dataDeploy":"%s","evento":"%s","execucao":"%s"}\n' \
+            "$REF_PUBLICADA" "$COMMIT" "$DATA" "$EVENTO" "$EXECUCAO" > build-info.json
+          echo "Publicando $REF_PUBLICADA (commit $COMMIT) — evento: $EVENTO"
+          cat build-info.json
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Empacotar o site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Publicar
+        id: publicacao
+        uses: actions/deploy-pages@v4
