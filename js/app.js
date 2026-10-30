@@ -236,7 +236,7 @@ async function iniciar() {
   renderizarCarrinho();
 
   // Campanha Black Friday (RET-203): remova as duas barras da linha abaixo para ligar o contador
-  // if (CONFIG.blackFriday.ativa) iniciarContador(CONFIG.blackFriday);
+  if (CONFIG.blackFriday.ativa) iniciarContador(CONFIG.blackFriday);
 
   renderizarFiltros();
   renderizarCatalogo();
