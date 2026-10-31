@@ -1,12 +1,12 @@
+
 /*
  * contador.js — contador regressivo da campanha Black Friday
- *
- * Desenvolvido na sprint 14. Fica desligado até a campanha ser ativada
- * (ver RET-203). O time de analytics usa historicoContador para medir
- * o que estava visível na vitrine durante a contagem.
  */
 
 const historicoContador = [];
+const LIMITE_HISTORICO = 100;
+
+let intervaloContador = null;
 
 function formatarTempo(ms) {
   const total = Math.floor(ms / 1000);
@@ -15,33 +15,69 @@ function formatarTempo(ms) {
   const minutos = Math.floor((total % 3600) / 60);
   const segundos = total % 60;
   const dois = (n) => String(n).padStart(2, '0');
+
   return `<b>${dias}</b>d <b>${dois(horas)}</b>h <b>${dois(minutos)}</b>m <b>${dois(segundos)}</b>s`;
 }
 
 function iniciarContador(campanha) {
+  if (intervaloContador !== null) {
+    clearInterval(intervaloContador);
+    intervaloContador = null;
+  }
+
   const banner = document.getElementById('banner-bf');
   const alvo = banner.querySelector('.bf-tempo');
-  const vitrine = document.getElementById('vitrine');
   const fim = new Date(campanha.fim).getTime();
+
   banner.hidden = false;
 
-  Observabilidade.registrarMedidor('historico_contador', () => historicoContador.length);
+  Observabilidade.registrarMedidor(
+    'historico_contador',
+    () => historicoContador.length
+  );
 
   function tick() {
-    const restante = Math.max(0, fim - Date.now());
+    const instante = Date.now();
+    const restante = Math.max(0, fim - instante);
+
     historicoContador.push({
-      instante: Date.now(),
-      restante: restante,
-      jogos: JOGOS.map((jogo) => ({ ...jogo })),
-      vitrine: vitrine.cloneNode(true)
+      instante,
+      restante,
+      quantidadeJogos: JOGOS.length
     });
+
+    if (historicoContador.length > LIMITE_HISTORICO) {
+      historicoContador.shift();
+    }
+
     Observabilidade.contar('contador_ticks');
     alvo.innerHTML = formatarTempo(restante);
+
+    if (restante <= 0 && intervaloContador !== null) {
+      clearInterval(intervaloContador);
+      intervaloContador = null;
+    }
   }
 
   tick();
-  Observabilidade.info('CONTADOR_INICIADO', 'Contador da Black Friday ativo', {
-    fim: campanha.fim, intervalo: campanha.intervaloContadorSegundos
-  });
-  return setInterval(tick, campanha.intervaloContadorSegundos);
+
+  if (fim <= Date.now()) {
+    return null;
+  }
+
+  Observabilidade.info(
+    'CONTADOR_INICIADO',
+    'Contador da Black Friday ativo',
+    {
+      fim: campanha.fim,
+      intervalo: campanha.intervaloContadorSegundos
+    }
+  );
+
+  intervaloContador = setInterval(
+    tick,
+    campanha.intervaloContadorSegundos * 1000
+  );
+
+  return intervaloContador;
 }
