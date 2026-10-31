@@ -1,6 +1,6 @@
 {
   "nomeLoja": "Retrô 128",
-  "versao": "2.0.0",
+  "versao": "2.0.1",
   "ambiente": "producao",
   "moeda": "BRL",
   "catalogoUrl": "data/catalogo.json",
@@ -20,7 +20,7 @@
       "ps2-03": {
         "percentual": 25
       },
-      "ps2-07": {
+      "ps2-04": {
         "percentual": 40
       }
     }
